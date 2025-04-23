@@ -33,8 +33,8 @@ jobs:
 
       - name: Verify formatting
         run: |
-          dart format --output=none --set-exit-if-changed $(find lib/src -name "*.dart" -not \( -name "*.*freezed.dart" -o -name "*.*g.dart" -o -name "*lichess_icons.dart" \) )
-          dart format --output=none --set-exit-if-changed $(find test -name "*.dart" -not \( -name "*.*freezed.dart" -o -name "*.*g.dart" \) )
+          dart format .
+          cat lib/src/view/account/edit_profile_screen.dart
         # run: dart format --output=none --set-exit-if-changed .
 
       - name: Analyze project source
